@@ -1,0 +1,25 @@
+[package]
+name = "rails-cookie-parser"
+version = "0.1.0"
+authors = ["Arnaud 'red' Rouyer"]
+edition = "2021"
+description = "A decryption library for Rails cookies"
+readme = "README.md"
+repository = "https://github.com/joshleaves/rails-cookie-parser"
+license = "MIT"
+keywords = ["rails", "cookies"]
+categories = ["web-programming::http-server"]
+
+[lib]
+name = "rails_cookie_parser"
+path = "src/lib.rs"
+
+[dependencies]
+base64 = "0.22.1"
+pbkdf2 = { version = "0.12", features = ["simple"] }
+aes-gcm = "0.10.3"
+sha1 = "0.10"
+sha2 = "0.10"
+
+# [dev-dependencies]
+# criterion = { version = "0.5.1", features = ["html_reports"] }
